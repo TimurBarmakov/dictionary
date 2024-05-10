@@ -172,3 +172,23 @@ h4 {
     text-decoration: underline; 
     color: #926390;
 }
+
+
+.errorContainer {
+    color: #ffffff;
+    background-color: #ba86b7;
+    padding: 20px; 
+    margin-top: 20px; 
+    border-radius: 16px;
+    border: none; 
+    text-align: center; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.errorMessage {
+    margin-right: 10px;
+    font-size: 26px;
+}

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import SearchImage from '../assets/images/search.svg';
+import getWords from '../api/words/getWords';
 import styles from './MainBlock.module.css';
 
 
@@ -10,22 +11,11 @@ const MainBlock = () => {
     const [wiktionaryUrl, setWiktionaryUrl] = useState(''); 
 
     const fetchWordInfo = async () => {
-        if (!word) return; 
-
-        try {
-            const url = `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`;
-            setWiktionaryUrl(`https://en.wiktionary.org/wiki/${word}`); 
-            const response = await fetch(url);
-            if (!response.ok) {
-                throw new Error('Word not found');
-            }
-            const data = await response.json();
-            setWordInfo(data);
-            setError('');
-        } catch (e) {
-            setError(e.message);
-            setWordInfo(null);
-        }
+        if (!word) return;
+        const result = await getWords(word);
+        setWordInfo(result.data);
+        setError(result.error);
+        setWiktionaryUrl(result.wiktionaryUrl);
     };
 
     const handleChange = (event) => {
@@ -61,7 +51,12 @@ const MainBlock = () => {
                     <img type="submit" src={SearchImage} alt="Search" />
                 </button>
             </form>
-            {error && <p>Error: {error}</p>}
+            {error && 
+                <div className={styles.errorContainer}>
+                <p className={styles.errorMessage}>
+                    😢 Oops! Something went wrong: {error}
+                </p>
+            </div>}
             {wordInfo && (
                  <div className="word-details">
                  {wordInfo.map((info, index) => (

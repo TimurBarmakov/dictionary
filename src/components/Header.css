@@ -72,17 +72,33 @@ body {
 .font-select {
     background: transparent; 
     border: none;
+    font-family: inherit;
     color: inherit; 
-    font-size: 16px; 
+    font-size: 20px; 
     padding: 10px; 
+    padding-right: 0;
     appearance: none; 
     -moz-appearance: none;
     -webkit-appearance: none;
 }
 
+.font-select option { 
+    background: transparent;
+    color: inherit; 
+    border: none;
+    font-size: 16px;
+    padding: 10px;
+    appearance: none;
+    -moz-appearance: none; 
+    -webkit-appearance: none; 
+}
+
 .font-select:focus {
     outline: none;
+    background-color: #ba86b7;
+    color: #ffffff;
 }
+
 
 .switch {
     position: relative;

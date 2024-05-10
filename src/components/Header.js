@@ -25,6 +25,14 @@ const Header = () => {
         setFontStyle(event.target.value);
     };
 
+    const fontStyleSelectStyle = {
+        color: isDarkTheme ? '#ffffff' : '#000000', 
+        backgroundColor: isDarkTheme ? '#333333' : '#ffffff', 
+        transition: 'background-color 0.5s, color 0.5s' 
+
+    };
+    
+
     return (
         <header className="header">
             <div className="container">
@@ -32,7 +40,7 @@ const Header = () => {
                     <img src={BookImage} alt="Book Logo" />
                 </div>
                 <div className="settingsContainer">
-                    <select id="fontStyleSelect" className="font-select" value={fontStyle} onChange={handleFontChange}>
+                    <select id="fontStyleSelect" className="font-select" value={fontStyle} onChange={handleFontChange} style={fontStyleSelectStyle}>
                         <option value="serif">Serif</option>
                         <option value="sans-serif">Sans-Serif</option>
                         <option value="monospace">Monospace</option>
