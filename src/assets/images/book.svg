@@ -1,0 +1,9 @@
+<svg id="_1-Book" data-name="1-Book" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+    <title>1-Book</title>
+    <path fill="#ba86b7" d="M29,0H7A5,5,0,0,0,2,5V27a5,5,0,0,0,5,5H29a1,1,0,0,0,1-1V1A1,1,0,0,0,29,0ZM28,30H7a3,3,0,0,1,0-6H25a3,3,0,0,1,2.82,2H11v2H28Zm0-7a5,5,0,0,0-3-1H7a5,5,0,0,0-3,1V5A3,3,0,0,1,7,2H28Z"/>
+    <rect fill="#ba86b7" x="7" y="26" width="2" height="2"/>
+    <path fill="#ba86b7" d="M7,10a1,1,0,0,0,1,1H24a1,1,0,0,0,1-1V6a1,1,0,0,0-1-1H8A1,1,0,0,0,7,6ZM9,7H23V9H9Z"/>
+    <rect fill="#ba86b7" x="7" y="14" width="2" height="2"/>
+    <rect fill="#ba86b7" x="11" y="14" width="2" height="2"/>
+    <rect fill="#ba86b7" x="17" y="14" width="8" height="2"/>
+</svg>
