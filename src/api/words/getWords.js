@@ -8,6 +8,9 @@ const getWords = async (word) => {
             throw new Error('Word not found');
         }
         const data = await response.json();
+        const result = { data, wiktionaryUrl, error: null };
+        console.log("Result from getWords:", result);
+        return result;
         return { data, wiktionaryUrl, error: null };
     } catch (error) {
         return { data: null, wiktionaryUrl, error: error.message };

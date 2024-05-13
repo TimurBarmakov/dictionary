@@ -27,11 +27,12 @@ const MainBlock = () => {
         fetchWordInfo();
     };
 
-    const playAudio = (audioUrl) => {
-        const correctAudioUrl = audioUrl.startsWith('http') ? audioUrl : `https:${audioUrl}`;
+    const playAudio = (getWords) => {
+        const correctAudioUrl = getWords.startsWith('http') ? getWords : `https:${getWords}`;
         const audio = new Audio(correctAudioUrl);
         audio.play().catch(e => console.error("Ошибка воспроизведения аудио:", e));
     };
+    
     
 
 

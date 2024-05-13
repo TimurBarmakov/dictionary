@@ -45,6 +45,7 @@ const Header = () => {
                         <option value="sans-serif">Sans-Serif</option>
                         <option value="monospace">Monospace</option>
                     </select>
+                    <hr />
                     <div className="themeToggle">
                         <label className="switch">
                             <input type="checkbox" id="themeToggleCheckbox" checked={isDarkTheme} onChange={handleThemeChange} />

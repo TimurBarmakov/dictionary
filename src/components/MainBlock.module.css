@@ -29,6 +29,7 @@
 
 .searchForm {
     display: flex;
+    position: relative;
     border: 1px solid #ccc;
     border-radius: 18px;
     overflow: hidden;
@@ -48,11 +49,12 @@
 
 .searchButton {
     
-    background:#ededed;
+    position: absolute;
+    right: 15px;
     border: none;
-    padding: 0;
-    padding-right: 20px;
+    background: none;
     cursor: pointer;
+    height: 100%;
 }
 
 .searchButton img {
@@ -68,7 +70,6 @@
     margin-bottom: 0;
 }
 
-/* styles.module.css */
 .phonetic {
     display: flex;
     justify-content: space-between;
@@ -192,3 +193,12 @@ h4 {
     margin-right: 10px;
     font-size: 26px;
 }
+
+@media (max-width: 1400px) {
+    .container {
+        padding: 15px 25px;
+    }
+    .inputField {
+        padding-right: 0;
+    }
+  }
